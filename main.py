@@ -52,11 +52,5 @@ class MyApp(App):
     def callback(self, instance):
         self.greeting.text = "Hello " + self.user.text + "!"
 
-        
-     
-     
-     
-
-
 if __name__ == "__main__":
     MyApp().run()
