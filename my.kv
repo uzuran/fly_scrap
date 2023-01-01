@@ -1,24 +1,31 @@
-<MyGrid>
-    GridLayout:
-        cols: 1
-        size: root.width - 100, root.height - 100
-        pos: 50, 50
+<MyLayout>
 
-        GridLayout:
-            cols: 2
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
 
-            Label:
-                text: "User name: "
+        Image:
+            source: "logo.jpg"
 
-            TextInput:
-                multiline: False
+        Label:
+            id: name_label
+            text: "Test invitation greeting!"
+            font_size: 18
+            color: "#FFFF00"
 
-            Label:
-                text: "Password: "
+        TextInput:
+            multiline: False
+            padding_y: (20, 20)
+            size_hint: (1, 0.5)
+            id: name_input
 
-            TextInput:
-                multiline: False
         Button:
-            text: "Submit"
-            size_hint: (0.6, 0.7)
+            text: "Click here for log in"
+            size_hint: (1, 0.5)
+            bold: True
+            background_color: "#FFFF00"
+            on_press: root.click_btn()
+
 
