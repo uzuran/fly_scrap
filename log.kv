@@ -1,57 +1,44 @@
-#Login:
-<Login>
-
-# MD = middle
-
+Screen:
     MDCard:
         size_hint: None, None
-        size: 300, 400
-        position_hint: {"center_x": 0.5, "center_y": 0.5}
+        size: 400, 500
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
         elevation: 10
-        padding: 50
-        spacing: 20
+        padding: 25
+        spacing: 25
         orientation: "vertical"
+
+        Image:
+            source: "fly_icon.png"
+
 
         MDLabel:
             id: welcome_label
-            text: "Create your login: "
+            text: "Fly_app"
             font_size: 40
             halign: "center"
             size_hint_y: None
             height: self.texture_size[1]
             padding_y: 15
 
-        MDTextFieldRound:
-            id: user
-            hint_text: "username"
-            icon_right: "account"
-            size_hint_x: None
-            width: 200
-            font_size: 18
-            pos_hint = {"center_x": 0.5}
+        MDTextField:
+            icon_left: "account"
+            hint_text: 'User name'
+            pos: (100, 100)
 
-        MDTextFieldRound:
-            id: password
-            hint_text: "password"
-            icon_right: "eye_off"
-            size_hint_x: None
-            width: 200
-            font_size: 18
-            pos_hint: {"center_x": 0.5}
+        MDTextField:
+            icon_left: 'key-variant'
+            hint_text: "Password"
             password: True
 
         MDRoundFlatButton:
-            text: "LOG IN"
-            font_size: 12
-            pos_hint = {"center_x": 0.5}
-            on_press: app.logger()
+            pos_hint: {"center_x": 0.5}
+            text: "Login"
+            text_color: 0, 1, 0, 1
 
         MDRoundFlatButton:
-            text: "CLEAR"
-            font_size: 12
-            pos_hint = {"center_x": 0.5}
-            on_press: app.clear()
-            
-        Widget:
-            size_hint_y: None
-            height: 8
+            pos_hint: {"center_x": 0.5}
+            text: "Registration"
+            text_color: 0, 1, 0, 1
+
+
