@@ -14,6 +14,7 @@ class Login(MDApp):
         self.theme_cls.theme_style = "Dark"
         self.theme_cls.primary_palette = "BlueGray"
         return Builder.load_file('log.kv')
+    
     def logger(self):
         self.root.ids.welcome_label.text = f"Welcome {self.root.ids.user.text}!"
    
