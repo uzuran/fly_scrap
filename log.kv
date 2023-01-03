@@ -1,7 +1,7 @@
 Screen:
     MDCard:
         size_hint: None, None
-        size: 400, 500
+        size: 400, 600
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         elevation: 10
         padding: 25
@@ -24,12 +24,14 @@ Screen:
         MDTextField:
             icon_left: "account"
             hint_text: 'User name'
-            pos: (100, 100)
-
+            mode: "rectangle"
         MDTextField:
             icon_left: 'key-variant'
+            normal_color: app.theme_cls.accent_color
             hint_text: "Password"
             password: True
+            mode: "rectangle"
+
 
         MDRoundFlatButton:
             pos_hint: {"center_x": 0.5}
