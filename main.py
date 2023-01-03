@@ -4,8 +4,6 @@ from kivy.properties import ObjectProperty
 
 
 class MyLayout(Widget):
-    greeting = ObjectProperty(None)
-
     def click_btn(self):
         name = self.ids.name_input.text
 
