@@ -4,7 +4,6 @@ from kivy.uix.widget import Widget
 
 class MyLayout(Widget):
 
-
     def click_btn(self):
         name = self.ids.name_input.text
 
