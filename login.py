@@ -9,7 +9,7 @@ class Mylayout(Widget):
     pass
 
 
-class Login(MDApp):
+class LogApplication(MDApp):
     def login_build(self):
         self.theme_cls.theme_style = "Dark"
         self.theme_cls.primary_palette = "BlueGray"
@@ -28,7 +28,7 @@ class Login(MDApp):
 
 
 if __name__ == "__main__":
-    Login().run()
+    LogApplication().run()
 
 
 
