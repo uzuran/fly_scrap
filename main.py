@@ -2,6 +2,7 @@
 from kivymd.app import MDApp
 from kivy.lang import Builder
 
+
 # Please tell me here why we use the MDApp ? Here we can speak about that on meeting.
 class MyApp(MDApp):
     def build(self):
@@ -13,3 +14,5 @@ class MyApp(MDApp):
 if __name__ == "__main__":
     MyApp().run()
 
+# Button:
+#                 text: lang.get('back_btn')
