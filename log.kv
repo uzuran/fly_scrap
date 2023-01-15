@@ -1,48 +1,62 @@
-Screen:
-    MDCard:
-        size_hint: None, None
-        size: 400, 500
-        pos_hint: {"center_x": 0.5, "center_y": 0.5}
-        elevation: 10
-        padding: 25
-        spacing: 25
-        orientation: "vertical"
+ScreenManager:
+    MenuScreen:
+    RegistrationScreen:
 
-        Image:
-            source: "fly_icon.png"
+<MenuScreen>:
+    name: "menu"
+    Image:
+        source: "fly_icon.png"
+        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+        height: dp(200)
+        pos_hint: {"top": 1}
 
+    MDLabel:
 
-        MDLabel:
-            id: welcome_label
-            text: "Fly_app"
-            font_size: 40
-            halign: "center"
-            size_hint_y: None
-            height: self.texture_size[1]
-            padding_y: 15
-
-        MDTextField:
-            icon_left: "account"
-            hint_text: 'User name'
-            mode: "round"
-        MDTextField:
-            icon_left: 'key-variant'
-            normal_color: app.theme_cls.accent_color
-            hint_text: "Password"
-            password: True
-            mode: "round"
+        id: welcome_label
+        text: "Fly_app"
+        font_size: 40
+        halign: "center"
+        size_hint_y: 1.3
+        height: self.texture_size[1]
+        padding_y: 15
 
 
-        MDRoundFlatButton:
-            pos_hint: {"center_x": 0.5}
-            text: "Login"
-            text_color: 1, 1, 1, 1
-            size_hint: 1, 0.4
-
-        MDRoundFlatButton:
-            pos_hint: {"center_x": 0.5}
-            text: "Registration"
-            text_color: 0, 1, 0, 1
-            size_hint: 1, 0.4
+    MDTextField:
+        icon_left: "account"
+        hint_text: 'User name'
+        mode: "round"
+        size_hint_x: None
+        width: 200
+        font_size: 18
+        pos_hint: {"center_y": 0.5, "center_x": 0.5}
 
 
+
+    MDTextField:
+        icon_left: 'key-variant'
+        normal_color: app.theme_cls.accent_color
+        hint_text: "Password"
+        password: True
+        mode: "round"
+        size_hint_x: None
+        width: 200
+        font_size: 18
+        pos_hint: {"center_y": 0.4, "center_x": 0.5}
+
+
+    MDRectangleFlatButton:
+        text:   "Log in"
+        pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+
+    MDRectangleFlatButton:
+        text:   "registration"
+        pos_hint: {"center_x": 0.5, "center_y": 0.1}
+        on_press: root.manager.current = "registration"
+
+<RegistrationScreen>
+
+    name: "registration"
+    MDLabel:
+        text: "Welcome"
+        haligin: "center"
