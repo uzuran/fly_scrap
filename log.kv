@@ -1,6 +1,8 @@
 ScreenManager:
     MenuScreen:
     RegistrationScreen:
+    LoginScreen:
+    AboutApplicationScreen:
 
 <MenuScreen>:
     name: "menu"
@@ -20,43 +22,182 @@ ScreenManager:
         height: self.texture_size[1]
         padding_y: 15
 
+    MDLabel:
+
+        
+        text: "Greetings!"
+        font_name: "SourceCodePro"
+        font_size: 35
+        halign: "center"
+        size_hint_y: 1.1
+        height: self.texture_size[1]
+        padding_y: 15
+
+    MDLabel:
+
+        
+        text: "Find the cheapest ticket, buy and just FLY"
+        font_name: "SourceCodePro"
+        font_size: 20
+        halign: "center"
+        size_hint_y: 0.9
+        height: self.texture_size[1]
+        padding_y: 15
+
+    
+
+    MDRectangleFlatButton:
+
+
+        text:   "Log in"
+        size_hint: 0.66, 0.065
+        pos_hint: {"center_x": 0.5, "center_y": 0.32}
+        on_release: 
+            root.manager.transition.direction = "left"
+            root.manager.current = "Log in"
+
+
+    MDRectangleFlatButton:
+
+
+        text:   "Sign up"
+        size_hint: 0.66, 0.065
+        pos_hint: {"center_x": 0.5, "center_y": 0.22}
+        on_release: 
+            root.manager.transition.direction = "right"
+            root.manager.current = "Sign Up"
+
+    MDRectangleFlatButton:
+
+
+        text:   "About app"
+        size_hint: 0.66, 0.065
+        pos_hint: {"center_x": 0.5, "center_y": 0.09}
+        on_release: 
+            root.manager.transition.direction = "up"
+            root.manager.current = "About app"
+        
+        
+
+
+<RegistrationScreen>:
+    name: "Sign Up"
+    
+    MDLabel:
+
+
+        id: welcome_label
+        text: "Cteate a new account"
+        font_size: 30
+        font_name: "SourceCodePro"
+        halign: "center"
+        size_hint_y: 1.8
+        height: self.texture_size[1]
+        padding_y: 15
+
 
     MDTextField:
-        icon_left: "account"
-        hint_text: 'User name'
-        mode: "round"
+
+
+        hint_text: "Your nickname"
+        mode: "rectangle"
+        size_hint: 0.85, 0.085
+        size_hint_x: None
+        size_hint_y: None
+        width: 200
+        font_size: 18
+        pos_hint: {"center_y": 0.7, "center_x": 0.5}
+
+    MDTextField:
+
+
+        hint_text: "Your email"
+        mode: "rectangle"
+        size_hint: 0.85, 0.085
+        size_hint_x: None
+        size_hint_y: None 
+        width: 200
+        font_size: 18
+        pos_hint: {"center_y": 0.55, "center_x": 0.5}
+
+
+
+    MDTextField:
+
+
+        hint_text: "Write your password"
+        password: True
+        mode: "rectangle"
+        size_hint_x: None
+        size_hint_y: None
+        width: 200
+        font_size: 18
+        pos_hint: {"center_y": 0.40, "center_x": 0.5}
+
+        # https://www.youtube.com/watch?v=6JfwUlGLXFM
+
+
+
+
+<LoginScreen>:
+    name: "Log in"
+
+    MDLabel:
+
+
+        id: welcome_label
+        text: "Log in with existed account"
+        font_size: 30
+        font_name: "SourceCodePro"
+        halign: "center"
+        size_hint_y: 1.8
+        height: self.texture_size[1]
+        padding_y: 15
+
+    MDTextField:
+
+
+        icon_left: "user_key"
+        hint_text: "User name"
+        mode: "rectangle"
         size_hint_x: None
         width: 200
         font_size: 18
-        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+        pos_hint: {"center_y": 0.55, "center_x": 0.5}
+    
 
-
-
+    
     MDTextField:
-        icon_left: 'key-variant'
+
+
+        icon_left: "password_key"
         normal_color: app.theme_cls.accent_color
         hint_text: "Password"
         password: True
-        mode: "round"
+        mode: "rectangle"
         size_hint_x: None
         width: 200
         font_size: 18
-        pos_hint: {"center_y": 0.4, "center_x": 0.5}
+        pos_hint: {"center_y": 0.45, "center_x": 0.5}
+    
 
 
-    MDRectangleFlatButton:
-        text:   "Log in"
-        pos_hint: {"center_x": 0.5, "center_y": 0.2}
 
 
-    MDRectangleFlatButton:
-        text:   "registration"
-        pos_hint: {"center_x": 0.5, "center_y": 0.1}
-        on_press: root.manager.current = "registration"
 
-<RegistrationScreen>
+<AboutApplicationScreen>:
+    name: "About app"
 
-    name: "registration"
     MDLabel:
-        text: "Welcome"
-        haligin: "center"
+
+
+        id: welcome_label
+        text: "Cteate a new account"
+        font_size: 30
+        font_name: "SourceCodePro"
+        halign: "center"
+        size_hint_y: 1.8
+        height: self.texture_size[1]
+        padding_y: 15
+    
+
