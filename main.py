@@ -34,7 +34,7 @@ class MyApp(MDApp):
 
 
 if __name__ == "__main__":
-    LabelBase.register(name = "SourceCodePro", fn_regular = "D:\Stahování\SourceCodePro\SourceCodePro-Regular.ttf")
+    LabelBase.register(name="SourceCodePro", fn_regular="fonts/SofiaSansExtraCondensed-Italic-VariableFont_wght.ttf")
 
     MyApp().run()
 
