@@ -22,9 +22,9 @@ class AboutApplicationScreen(Screen):
 
 sm = ScreenManager()
 sm.add_widget(MenuScreen(name="menu"))
-sm.add_widget(RegistrationScreen(name="Sign Up"))
-sm.add_widget(LoginScreen(name="Log In"))
-sm.add_widget(AboutApplicationScreen(name="About App"))
+sm.add_widget(RegistrationScreen(name="Sign up"))
+sm.add_widget(LoginScreen(name="Log in"))
+sm.add_widget(AboutApplicationScreen(name="About app"))
 
 class MyApp(MDApp):
     def build(self):
