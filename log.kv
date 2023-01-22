@@ -70,7 +70,7 @@ ScreenManager:
         pos_hint: {"center_x": 0.5, "center_y": 0.22}
         on_release: 
             root.manager.transition.direction = "right"
-            root.manager.current = "Sign Up"
+            root.manager.current = "Sign up"
 
     MDRectangleFlatButton:
 
@@ -93,10 +93,10 @@ ScreenManager:
         
         
         icon: "arrow-left"
-        pos_hint: {"ceter_y": 0.95}
+        pos_hint: {"center_y": 0.95}
         user_font_size: "30sp"
         theme_text_color: "Custom"
-        on_relase: 
+        on_release: 
             root.manager.transition.direction = "right"
             root.manager.current = "menu"
             
@@ -161,6 +161,18 @@ ScreenManager:
 <LoginScreen>:
     name: "Log in"
 
+    MDIconButton:
+        
+        
+        icon: "arrow-left"
+        pos_hint: {"center_y": 0.95}
+        user_font_size: "30sp"
+        theme_text_color: "Custom"
+        on_release: 
+            root.manager.transition.direction = "left"
+            root.manager.current = "menu"
+
+
     MDLabel:
 
 
@@ -206,6 +218,17 @@ ScreenManager:
 
 <AboutApplicationScreen>:
     name: "About app"
+
+    MDIconButton:
+        
+        
+        icon: "arrow-left"
+        pos_hint: {"center_y": 0.95}
+        user_font_size: "30sp"
+        theme_text_color: "Custom"
+        on_release: 
+            root.manager.transition.direction = "up"
+            root.manager.current = "menu"
     
 
     MDLabel:
