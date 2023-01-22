@@ -99,6 +99,17 @@ ScreenManager:
         on_release: 
             root.manager.transition.direction = "right"
             root.manager.current = "menu"
+
+    MDRectangleFlatButton:
+
+
+        text:   "Confirm your registration"
+        size_hint: 0.66, 0.065
+        pos_hint: {"center_x": 0.50, "center_y": 0.23}
+        on_release: 
+            root.manager.current = "Sign up"
+
+    
             
     
     MDLabel:
@@ -153,6 +164,9 @@ ScreenManager:
         font_size: 18
         pos_hint: {"center_y": 0.40, "center_x": 0.5}
 
+
+
+
         # https://www.youtube.com/watch?v=6JfwUlGLXFM
 
 
@@ -171,6 +185,15 @@ ScreenManager:
         on_release: 
             root.manager.transition.direction = "left"
             root.manager.current = "menu"
+
+    MDRectangleFlatButton:
+
+
+        text:   "Confirm your login"
+        size_hint: 0.66, 0.065
+        pos_hint: {"center_x": 0.50, "center_y": 0.23}
+        on_release: 
+            root.manager.current = "Log in"
 
 
     MDLabel:
