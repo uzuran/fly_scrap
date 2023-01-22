@@ -5,6 +5,7 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.core.window import Window
 Window.size = (340, 620)
+#comment
 
 
 class MenuScreen(Screen):
