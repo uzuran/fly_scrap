@@ -89,7 +89,16 @@ ScreenManager:
     name: "Sign up"
 
 
-    
+    MDIconButton:
+        
+        
+        icon: "arrow-left"
+        pos_hint: {"ceter_y": 0.95}
+        user_font_size: "30sp"
+        theme_text_color: "Custom"
+        on_relase: 
+            root.manager.transition.direction = "right"
+            root.manager.current = "menu"
             
     
     MDLabel:
