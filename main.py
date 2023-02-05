@@ -4,8 +4,10 @@ from kivy.core.text import LabelBase
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.core.window import Window
+from kivy.config import Config
+
+
 Window.size = (340, 620)
-#comment
 
 
 class MenuScreen(Screen):
@@ -19,6 +21,12 @@ class LoginScreen(Screen):
 
 class AboutApplicationScreen(Screen):
     pass
+
+
+# def add_config_lang():
+#     Config.read("czech.ini")
+#     user_key = Config.get("DEFAULT", "user_key")
+#     return user_key
 
 
 sm = ScreenManager()
