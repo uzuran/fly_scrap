@@ -7,8 +7,6 @@ from kivy.core.window import Window
 Window.size = (340, 620)
 
 
-
-
 class MenuScreen(Screen):
     pass
 
@@ -30,6 +28,7 @@ sm.add_widget(MenuScreen(name="menu"))
 sm.add_widget(RegistrationScreen(name="Sign up"))
 sm.add_widget(LoginScreen(name="Log in"))
 sm.add_widget(AboutApplicationScreen(name="About app"))
+
 
 class MyApp(MDApp):
     def build(self):
