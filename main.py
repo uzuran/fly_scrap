@@ -4,7 +4,6 @@ from kivy.core.text import LabelBase
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.core.window import Window
-from kivy.config import Config
 
 
 Window.size = (340, 620)
@@ -13,20 +12,17 @@ Window.size = (340, 620)
 class MenuScreen(Screen):
     pass
 
+
 class RegistrationScreen(Screen):
     pass
+
 
 class LoginScreen(Screen):
     pass
 
+
 class AboutApplicationScreen(Screen):
     pass
-
-
-# def add_config_lang():
-#     Config.read("czech.ini")
-#     user_key = Config.get("DEFAULT", "user_key")
-#     return user_key
 
 
 sm = ScreenManager()
@@ -34,6 +30,7 @@ sm.add_widget(MenuScreen(name="menu"))
 sm.add_widget(RegistrationScreen(name="Sign up"))
 sm.add_widget(LoginScreen(name="Log in"))
 sm.add_widget(AboutApplicationScreen(name="About app"))
+
 
 class MyApp(MDApp):
     def build(self):
@@ -47,5 +44,4 @@ if __name__ == "__main__":
 
     MyApp().run()
 
-# Button:
-#                 text: lang.get('back_btn')
+
