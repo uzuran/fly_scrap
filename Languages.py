@@ -10,8 +10,3 @@ def get(key: str):
     config_obj.read("czech.ini", encoding='UTF-8')
     return config_obj.get("DEFAULT", key)
 
-
-
-
-
-
