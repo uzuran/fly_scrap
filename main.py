@@ -4,6 +4,8 @@ from kivy.core.text import LabelBase
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.core.window import Window
+
+
 Window.size = (340, 620)
 
 
@@ -42,5 +44,4 @@ if __name__ == "__main__":
 
     MyApp().run()
 
-# Button:
-#                 text: lang.get('back_btn')
+

@@ -1,12 +1,17 @@
 from configparser import ConfigParser
 
 config_obj = ConfigParser()
-config_obj["DEFAULT"] = {
-    "User_key": "Uživatelské jméno",
-    "Password_key": "Heslo",
-    "Log_key": "Přihlašení",
-    "Registration_key": "Registrace"
-}
 
-with open("czech.ini", "w") as config_file:
-    config_obj.write(config_file)
+conf_lang = config_obj["DEFAULT"]
+
+
+# TODO here is the function for get from configparser by key.
+def get(key: str):
+    config_obj.read("czech.ini", encoding='UTF-8')
+    return config_obj.get("DEFAULT", key)
+
+
+
+
+
+

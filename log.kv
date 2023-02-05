@@ -1,3 +1,7 @@
+# TODO look  here how we import to .kv languages.
+#: import lang Languages
+
+
 ScreenManager:
     MenuScreen:
     RegistrationScreen:
@@ -116,7 +120,7 @@ ScreenManager:
 
 
         id: welcome_label
-        text: "Cteate a new account"
+        text: "Create a new account"
         font_size: 30
         font_name: "SourceCodePro"
         halign: "center"
@@ -212,7 +216,8 @@ ScreenManager:
 
 
         icon_left: "user_key"
-        hint_text: "User name"
+        # ToDo here we import strings like this.
+        hint_text: lang.get("log_key")
         mode: "rectangle"
         size_hint_x: None
         width: 200
